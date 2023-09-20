@@ -1,24 +1,23 @@
-import Menu from 'components/Menu';
-import Cardapio from 'pages/Cardapio';
-import Inicio from 'pages/Inicio';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import styles from './Routes.module.scss';
 
-export default function AppRouter() {
-    return (
-        <main>
-            <Router>
-                <Menu></Menu>
-                <header className={styles.header}>
-                    <div className={styles.header__text}>
-                        A casa do código e da massa
-                    </div>
-                </header>
-                <Routes>
-                    <Route path='/' element={<Inicio />} />
-                    <Route path='/cardapio' element={<Cardapio />} />
+import Menu from 'components/Menu'; // importa o componente Menu
+import PaginaPadrao from 'components/PaginaPadrao'; // importa o componente PaginaPadrao
+import Cardapio from 'pages/Cardapio'; // importa o componente Cardapio
+import Inicio from 'pages/Inicio'; // importa o componente Inicio
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // importa o roteador do React
+
+export default function AppRouter() { // define o componente AppRouter
+    return ( // retorna o componente
+        <main> {/* elemento pai */}
+            <Router> {/* roteador */}
+                <Menu></Menu> {/* renderiza o componente Menu */}
+                <Routes> {/* rotas */}
+                    <Route path='/' element={<PaginaPadrao></PaginaPadrao>}> {/* rota para a página inicial */}
+                        <Route index element={<Inicio></Inicio>}></Route> {/* rota para o componente Inicio */}
+                        <Route path='cardapio' element={<Cardapio />} /> {/* rota para o componente Cardapio */}
+                    </Route>
+
                 </Routes>
             </Router>
-        </main>
+        </main >
     );
 }
