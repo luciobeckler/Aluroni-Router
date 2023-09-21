@@ -5,6 +5,7 @@ import PaginaPadrao from 'components/PaginaPadrao'; // importa o componente Pagi
 import Cardapio from 'pages/Cardapio'; // importa o componente Cardapio
 import Inicio from 'pages/Inicio'; // importa o componente Inicio
 import NotFound from 'pages/NotFound';
+import Prato from 'pages/Prato';
 import Sobre from 'pages/Sobre';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // importa o roteador do React
 
@@ -20,6 +21,7 @@ export default function AppRouter() { // define o componente AppRouter
                         <Route path='sobre' element={<Sobre></Sobre>}></Route> {/* rota para o componente Sobre */}
                     </Route>
                     <Route path='*' element={<NotFound></NotFound>}></Route>
+                    <Route path='prato/:id' element={<Prato></Prato>}></Route>
                 </Routes>
                 <Footer></Footer>
             </Router>
