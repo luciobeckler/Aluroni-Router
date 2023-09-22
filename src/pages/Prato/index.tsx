@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './Prato.module.scss';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 export default function Prato() {
-    console.log(useParams());
+    const { state } = useLocation();
+    const { prato } = state;
+
+    console.log(state);
+    console.log(prato);
     return <div>Prato</div>;
 }
