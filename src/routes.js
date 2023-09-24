@@ -19,9 +19,9 @@ export default function AppRouter() { // define o componente AppRouter
                         <Route index element={<Inicio></Inicio>}></Route> {/* rota para o componente Inicio */}
                         <Route path='cardapio' element={<Cardapio />} /> {/* rota para o componente Cardapio */}
                         <Route path='sobre' element={<Sobre></Sobre>}></Route> {/* rota para o componente Sobre */}
+                        <Route path='prato/:id' element={<Prato></Prato>}></Route>
                     </Route>
                     <Route path='*' element={<NotFound></NotFound>}></Route>
-                    <Route path='prato/:id' element={<Prato></Prato>}></Route>
                 </Routes>
                 <Footer></Footer>
             </Router>
