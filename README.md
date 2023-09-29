@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# Projeto de Cardápio de Restaurante com React Router
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**React** ![React](https://img.shields.io/badge/16.13.1-blue)
+**React Router** ![React Router](https://img.shields.io/badge/5.2.0-green)
 
-## Available Scripts
+Este é um projeto de site apresentação completa de um restaurante desenvolvido usando como base o React visando exercitar os conceitos de roteamento, utilizando a biblioteca React Router DOM. Abaixo, você encontrará uma descrição dos principais conceitos que foram abordados:
 
-In the project directory, you can run:
+## Organização de Dados
 
-### `npm start`
+- Separamos os dados do cardápio em uma pasta separada para uma melhor organização.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Navegação com React Router
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### BrowserRouter e HashRouter
 
-### `npm test`
+- Exploramos as diferenças entre BrowserRouter e HashRouter para lidar com as rotas da aplicação.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Definição de Rotas
 
-### `npm run build`
+- Utilizamos o componente `Routes` para definir as rotas da nossa aplicação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Reaproveitamento do Header
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- O Header foi reutilizado usando o React Router para alternar entre as rotas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Utilização do Componente Link
 
-### `npm run eject`
+- Utilizamos o componente `Link` para criar links de navegação entre as diferentes páginas.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Página Padrão (Fallback)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Implementamos uma página padrão para casos em que nenhuma rota corresponde.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Desenvolvimento de Tema
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Desenvolvemos um tema personalizado para a aplicação para uma aparência única.
 
-## Learn More
+#### Uso do Outlet
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Aplicamos o componente `Outlet` do `react-router-dom` para melhor gerenciar o layout das páginas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Navegação com useNavigate
+
+- Utilizamos o hook `useNavigate` para navegar programaticamente entre as rotas da aplicação.
+
+#### Tratamento de Página Não Encontrada
+
+- Criamos uma página "Not Found" para lidar com rotas não encontradas.
+
+## Passagem de Parâmetros nas Rotas
+
+- Utilizamos o hook `useLocation` para acessar os parâmetros da rota.
+
+- Passamos estados entre as rotas para compartilhar informações.
+
+## Refatoração de Tags
+
+- Refatoramos as tags e componentes para melhorar a semântica do nosso site.
+
+#### Tela NotFound na Tela de Detalhes
+
+- Adicionamos a tela NotFound para a tela de detalhes quando um item não é encontrado.
+
+#### Utilização do Componente Navigate
+
+- Utilizamos o componente `Navigate` para navegar entre as rotas de forma programática.
+
+#### Resolução do Header
+
+- Resolvemos o problema relacionado ao header.
+
+Sinta-se à vontade para explorar o código-fonte deste projeto para obter uma compreensão mais aprofundada de como esses conceitos foram implementados.
+
+## Executando o Projeto
+
+1. Clone este repositório.
+2. Instale as dependências usando `npm install`.
+3. Inicie o aplicativo com `npm start`.
+
+Aproveite e explore este projeto de maneira rápida através do link https://aluroni-router-six.vercel.app/ onde está hospedada a aplicação!
